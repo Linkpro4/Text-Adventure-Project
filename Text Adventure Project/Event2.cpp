@@ -42,17 +42,17 @@ void Event2::runEvent()
 		std::cout << std::endl;
 
 		//Note Item
-		if (message == (verb1 + " object") && note == 0)
+		if (message == ("look at object") && note == 0)
 		{
 			//Describe object
 			std::cout << "The object looks like a piece of paper" << std::endl;
 		}
-		else if (message == (verb1 + " paper") && note == 0)
+		else if (message == ("look at paper") && note == 0)
 		{
 			//Describe object
 			std::cout << "The object looks like a piece of paper" << std::endl;
 		}
-		if (message == (verb1 + " note") && note == 0)
+		if (message == ("look at note") && note == 0)
 		{
 			//Describe object
 			std::cout << "The object looks like a piece of paper" << std::endl;
@@ -75,6 +75,7 @@ void Event2::runEvent()
 			note = 1;
 		}
 
+		//Reading Note
 		if (message == ("read note") && note == 1)
 		{
 			std::cout << "The note reads" << std::endl;
@@ -85,9 +86,19 @@ void Event2::runEvent()
 			std::cout << "The paper reads" << std::endl;
 			std::cout << "Stop To Analyze Nothing" << std::endl;
 		}
+		else if (message == ("look at paper") && note == 1)
+		{
+			std::cout << "The paper reads" << std::endl;
+			std::cout << "Stop To Analyze Nothing" << std::endl;
+		}
+		else if (message == ("look at note") && note == 1)
+		{
+			std::cout << "The paper reads" << std::endl;
+			std::cout << "Stop To Analyze Nothing" << std::endl;
+		}
 
 		//Look at nothing
-		if (message == (verb1))
+		if (message == ("look at"))
 		{
 			std::cout << "look at what?" << std::endl;
 		}
@@ -156,15 +167,15 @@ void Event2::runEvent()
 			std::cout << "You flipped switch 1" << std::endl;
 		}
 
-		if (message == (verb1 + " switch 1"))
+		if (message == ("look at switch 1"))
 		{
 			std::cout << "You see a small lightswitch with the letter ""T"" under it." << std::endl;
 		}
-		else if (message == (verb1 + " lightswitch 1"))
+		else if (message == ("look at lightswitch 1"))
 		{
 			std::cout << "You see a small lightswitch with the letter ""T"" under it." << std::endl;
 		}
-		else if (message == (verb1 + " light switch 1"))
+		else if (message == ("look at light switch 1"))
 		{
 			std::cout << "You see a small lightswitch with the letter ""T"" under it." << std::endl;
 		}
@@ -175,8 +186,18 @@ void Event2::runEvent()
 			switch2 = 1;
 			std::cout << "You flipped switch 2" << std::endl;
 		}
+		else if (message == ("flip lightswitch 2") && switch2 == 0)
+		{
+			switch2 = 1;
+			std::cout << "You flipped switch 2" << std::endl;
+		}
+		else if (message == ("flip light switch 2") && switch2 == 0)
+		{
+			switch2 = 1;
+			std::cout << "You flipped switch 2" << std::endl;
+		}
 
-		if (message == (verb1 + " switch 2"))
+		if (message == ("look at switch 2"))
 		{
 			std::cout << "You see a small lightswitch with the letter ""A"" under it." << std::endl;
 		}
@@ -279,6 +300,14 @@ void Event2::runEvent()
 				switch4 = 0;
 				std::cout << "You flip all the switches back down." << std::endl;
 			}
+
+			//Help
+			if (message == ("help"))
+			{
+				std::cout << "Use verbs such as look at, walk to, pick up, or flip" << std::endl;
+				std::cout << "Some helpful nouns would be note, switch, inventory, and door" << std::endl;
+				std::cout << "Make sure to type everything in lowercase" << std::endl;
+			}
 			while (switch1 == 1 && switch2 == 0 && switch3 == 0 && switch4 == 1)
 			{
 				//Input Answer
@@ -342,6 +371,14 @@ void Event2::runEvent()
 					switch4 = 0;
 					std::cout << "You flip all the switches back down." << std::endl;
 				}
+
+				//Help
+				if (message == ("help"))
+				{
+					std::cout << "Use verbs such as look at, walk to, pick up, or flip" << std::endl;
+					std::cout << "Some helpful nouns would be note, switch, inventory, and door" << std::endl;
+					std::cout << "Make sure to type everything in lowercase" << std::endl;
+				}
 				while (switch1 == 1 && switch2 == 1 && switch3 == 0 && switch4 == 1)
 				{
 					//Input Answer
@@ -404,6 +441,14 @@ void Event2::runEvent()
 						switch3 = 0;
 						switch4 = 0;
 						std::cout << "You flip all the switches back down." << std::endl;
+					}
+
+					//Help
+					if (message == ("help"))
+					{
+						std::cout << "Use verbs such as look at, walk to, pick up, or flip" << std::endl;
+						std::cout << "Some helpful nouns would be note, switch, inventory, and door" << std::endl;
+						std::cout << "Make sure to type everything in lowercase" << std::endl;
 					}
 					while (switch1 == 1 && switch2 == 1 && switch3 == 1 && switch4 == 1 && roomBeaten == 0)
 					{
