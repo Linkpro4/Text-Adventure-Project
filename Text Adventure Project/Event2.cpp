@@ -236,228 +236,6 @@ void Event2::runEvent()
 			std::cout << "You flip all the switches back down." << std::endl;
 		}
 
-		//Puzzle Checks
-		while (switch1 == 0 && switch2 == 0 && switch3 == 0 && switch4 == 1)
-		{
-			//Input Answer
-			std::cout << std::endl << "What will you do? (Type ""help"" to get more information)" << std::endl;
-			getline(std::cin, message);
-
-			//Switch 1
-			if (message == ("flip switch 1") && switch1 == 0)
-			{
-				switch1 = 1;
-				std::cout << "You flipped switch 1" << std::endl;
-			}
-
-			if (message == (verb1 + " switch 1"))
-			{
-				std::cout << "You see a small lightswitch with the letter ""T"" under it." << std::endl;
-			}
-
-			//Switch 2
-			if (message == ("flip switch 2") && switch2 == 0)
-			{
-				switch2 = 1;
-				std::cout << "You flipped switch 2" << std::endl;
-			}
-
-			if (message == (verb1 + " switch 2"))
-			{
-				std::cout << "You see a small lightswitch with the letter ""A"" under it." << std::endl;
-			}
-
-			//Switch 3
-			if (message == ("flip switch 3") && switch3 == 0)
-			{
-				switch3 = 1;
-				std::cout << "You flipped switch 3" << std::endl;
-			}
-
-			if (message == (verb1 + " switch 3"))
-			{
-				std::cout << "You see a small lightswitch with the letter ""N"" under it." << std::endl;
-			}
-
-			//Switch 4
-			if (message == ("flip switch 4") && switch4 == 0)
-			{
-				switch4 = 1;
-				std::cout << "You flipped switch 4" << std::endl;
-			}
-
-			if (message == (verb1 + " switch 4"))
-			{
-				std::cout << "You see a small lightswitch with the letter ""S"" under it." << std::endl;
-			}
-
-			//Reset Switch
-			if (message == ("reset switches"))
-			{
-				switch1 = 0;
-				switch2 = 0;
-				switch3 = 0;
-				switch4 = 0;
-				std::cout << "You flip all the switches back down." << std::endl;
-			}
-
-			//Help
-			if (message == ("help"))
-			{
-				std::cout << "Use verbs such as look at, walk to, pick up, or flip" << std::endl;
-				std::cout << "Some helpful nouns would be note, switch, inventory, and door" << std::endl;
-				std::cout << "Make sure to type everything in lowercase" << std::endl;
-			}
-			while (switch1 == 1 && switch2 == 0 && switch3 == 0 && switch4 == 1)
-			{
-				//Input Answer
-				std::cout << std::endl << "What will you do? (Type ""help"" to get more information)" << std::endl;
-				getline(std::cin, message);
-
-				//Switch 1
-				if (message == ("flip switch 1") && switch1 == 0)
-				{
-					switch1 = 1;
-					std::cout << "You flipped switch 1" << std::endl;
-				}
-
-				if (message == (verb1 + " switch 1"))
-				{
-					std::cout << "You see a small lightswitch with the letter ""T"" under it." << std::endl;
-				}
-
-				//Switch 2
-				if (message == ("flip switch 2") && switch2 == 0)
-				{
-					switch2 = 1;
-					std::cout << "You flipped switch 2" << std::endl;
-				}
-
-				if (message == (verb1 + " switch 2"))
-				{
-					std::cout << "You see a small lightswitch with the letter ""A"" under it." << std::endl;
-				}
-
-				//Switch 3
-				if (message == ("flip switch 3") && switch3 == 0)
-				{
-					switch3 = 1;
-					std::cout << "You flipped switch 3" << std::endl;
-				}
-
-				if (message == (verb1 + " switch 3"))
-				{
-					std::cout << "You see a small lightswitch with the letter ""N"" under it." << std::endl;
-				}
-
-				//Switch 4
-				if (message == ("flip switch 4") && switch4 == 0)
-				{
-					switch4 = 1;
-					std::cout << "You flipped switch 4" << std::endl;
-				}
-
-				if (message == (verb1 + " switch 4"))
-				{
-					std::cout << "You see a small lightswitch with the letter ""S"" under it." << std::endl;
-				}
-
-				//Reset Switch
-				if (message == ("reset switches"))
-				{
-					switch1 = 0;
-					switch2 = 0;
-					switch3 = 0;
-					switch4 = 0;
-					std::cout << "You flip all the switches back down." << std::endl;
-				}
-
-				//Help
-				if (message == ("help"))
-				{
-					std::cout << "Use verbs such as look at, walk to, pick up, or flip" << std::endl;
-					std::cout << "Some helpful nouns would be note, switch, inventory, and door" << std::endl;
-					std::cout << "Make sure to type everything in lowercase" << std::endl;
-				}
-				while (switch1 == 1 && switch2 == 1 && switch3 == 0 && switch4 == 1)
-				{
-					//Input Answer
-					std::cout << std::endl << "What will you do? (Type ""help"" to get more information)" << std::endl;
-					getline(std::cin, message);
-
-					//Switch 1
-					if (message == ("flip switch 1") && switch1 == 0)
-					{
-						switch1 = 1;
-						std::cout << "You flipped switch 1" << std::endl;
-					}
-
-					if (message == (verb1 + " switch 1"))
-					{
-						std::cout << "You see a small lightswitch with the letter ""T"" under it." << std::endl;
-					}
-
-					//Switch 2
-					if (message == ("flip switch 2") && switch2 == 0)
-					{
-						switch2 = 1;
-						std::cout << "You flipped switch 2" << std::endl;
-					}
-
-					if (message == (verb1 + " switch 2"))
-					{
-						std::cout << "You see a small lightswitch with the letter ""A"" under it." << std::endl;
-					}
-
-					//Switch 3
-					if (message == ("flip switch 3") && switch3 == 0)
-					{
-						switch3 = 1;
-						std::cout << "You flipped switch 3" << std::endl;
-					}
-
-					if (message == (verb1 + " switch 3"))
-					{
-						std::cout << "You see a small lightswitch with the letter ""N"" under it." << std::endl;
-					}
-
-					//Switch 4
-					if (message == ("flip switch 4") && switch4 == 0)
-					{
-						switch4 = 1;
-						std::cout << "You flipped switch 4" << std::endl;
-					}
-
-					if (message == (verb1 + " switch 4"))
-					{
-						std::cout << "You see a small lightswitch with the letter ""S"" under it." << std::endl;
-					}
-
-					//Reset Switch
-					if (message == ("reset switches"))
-					{
-						switch1 = 0;
-						switch2 = 0;
-						switch3 = 0;
-						switch4 = 0;
-						std::cout << "You flip all the switches back down." << std::endl;
-					}
-
-					//Help
-					if (message == ("help"))
-					{
-						std::cout << "Use verbs such as look at, walk to, pick up, or flip" << std::endl;
-						std::cout << "Some helpful nouns would be note, switch, inventory, and door" << std::endl;
-						std::cout << "Make sure to type everything in lowercase" << std::endl;
-					}
-					while (switch1 == 1 && switch2 == 1 && switch3 == 1 && switch4 == 1 && roomBeaten == 0)
-					{
-						roomBeaten = 1;
-					}
-				}
-			}
-		}
-
 		//Room beaten
 		else if (roomBeaten == 1 && roomFinished == 0)
 		{
@@ -474,6 +252,228 @@ void Event2::runEvent()
 		else
 		{
 		std::cout << "I don't understand what you are saying" << std::endl;
+		 }
+
+		 //Puzzle Checks
+		 while (switch1 == 0 && switch2 == 0 && switch3 == 0 && switch4 == 1)
+		 {
+			 //Input Answer
+			 std::cout << std::endl << "What will you do? (Type ""help"" to get more information)" << std::endl;
+			 getline(std::cin, message);
+
+			 //Switch 1
+			 if (message == ("flip switch 1") && switch1 == 0)
+			 {
+				 switch1 = 1;
+				 std::cout << "You flipped switch 1" << std::endl;
+			 }
+
+			 if (message == (verb1 + " switch 1"))
+			 {
+				 std::cout << "You see a small lightswitch with the letter ""T"" under it." << std::endl;
+			 }
+
+			 //Switch 2
+			 if (message == ("flip switch 2") && switch2 == 0)
+			 {
+				 switch2 = 1;
+				 std::cout << "You flipped switch 2" << std::endl;
+			 }
+
+			 if (message == (verb1 + " switch 2"))
+			 {
+				 std::cout << "You see a small lightswitch with the letter ""A"" under it." << std::endl;
+			 }
+
+			 //Switch 3
+			 if (message == ("flip switch 3") && switch3 == 0)
+			 {
+				 switch3 = 1;
+				 std::cout << "You flipped switch 3" << std::endl;
+			 }
+
+			 if (message == (verb1 + " switch 3"))
+			 {
+				 std::cout << "You see a small lightswitch with the letter ""N"" under it." << std::endl;
+			 }
+
+			 //Switch 4
+			 if (message == ("flip switch 4") && switch4 == 0)
+			 {
+				 switch4 = 1;
+				 std::cout << "You flipped switch 4" << std::endl;
+			 }
+
+			 if (message == (verb1 + " switch 4"))
+			 {
+				 std::cout << "You see a small lightswitch with the letter ""S"" under it." << std::endl;
+			 }
+
+			 //Reset Switch
+			 if (message == ("reset switches"))
+			 {
+				 switch1 = 0;
+				 switch2 = 0;
+				 switch3 = 0;
+				 switch4 = 0;
+				 std::cout << "You flip all the switches back down." << std::endl;
+			 }
+
+			 //Help
+			 if (message == ("help"))
+			 {
+				 std::cout << "Use verbs such as look at, walk to, pick up, or flip" << std::endl;
+				 std::cout << "Some helpful nouns would be note, switch, inventory, and door" << std::endl;
+				 std::cout << "Make sure to type everything in lowercase" << std::endl;
+			 }
+			 while (switch1 == 1 && switch2 == 0 && switch3 == 0 && switch4 == 1)
+			 {
+				 //Input Answer
+				 std::cout << std::endl << "What will you do? (Type ""help"" to get more information)" << std::endl;
+				 getline(std::cin, message);
+
+				 //Switch 1
+				 if (message == ("flip switch 1") && switch1 == 0)
+				 {
+					 switch1 = 1;
+					 std::cout << "You flipped switch 1" << std::endl;
+				 }
+
+				 if (message == (verb1 + " switch 1"))
+				 {
+					 std::cout << "You see a small lightswitch with the letter ""T"" under it." << std::endl;
+				 }
+
+				 //Switch 2
+				 if (message == ("flip switch 2") && switch2 == 0)
+				 {
+					 switch2 = 1;
+					 std::cout << "You flipped switch 2" << std::endl;
+				 }
+
+				 if (message == (verb1 + " switch 2"))
+				 {
+					 std::cout << "You see a small lightswitch with the letter ""A"" under it." << std::endl;
+				 }
+
+				 //Switch 3
+				 if (message == ("flip switch 3") && switch3 == 0)
+				 {
+					 switch3 = 1;
+					 std::cout << "You flipped switch 3" << std::endl;
+				 }
+
+				 if (message == (verb1 + " switch 3"))
+				 {
+					 std::cout << "You see a small lightswitch with the letter ""N"" under it." << std::endl;
+				 }
+
+				 //Switch 4
+				 if (message == ("flip switch 4") && switch4 == 0)
+				 {
+					 switch4 = 1;
+					 std::cout << "You flipped switch 4" << std::endl;
+				 }
+
+				 if (message == (verb1 + " switch 4"))
+				 {
+					 std::cout << "You see a small lightswitch with the letter ""S"" under it." << std::endl;
+				 }
+
+				 //Reset Switch
+				 if (message == ("reset switches"))
+				 {
+					 switch1 = 0;
+					 switch2 = 0;
+					 switch3 = 0;
+					 switch4 = 0;
+					 std::cout << "You flip all the switches back down." << std::endl;
+				 }
+
+				 //Help
+				 if (message == ("help"))
+				 {
+					 std::cout << "Use verbs such as look at, walk to, pick up, or flip" << std::endl;
+					 std::cout << "Some helpful nouns would be note, switch, inventory, and door" << std::endl;
+					 std::cout << "Make sure to type everything in lowercase" << std::endl;
+				 }
+				 while (switch1 == 1 && switch2 == 1 && switch3 == 0 && switch4 == 1)
+				 {
+					 //Input Answer
+					 std::cout << std::endl << "What will you do? (Type ""help"" to get more information)" << std::endl;
+					 getline(std::cin, message);
+
+					 //Switch 1
+					 if (message == ("flip switch 1") && switch1 == 0)
+					 {
+						 switch1 = 1;
+						 std::cout << "You flipped switch 1" << std::endl;
+					 }
+
+					 if (message == (verb1 + " switch 1"))
+					 {
+						 std::cout << "You see a small lightswitch with the letter ""T"" under it." << std::endl;
+					 }
+
+					 //Switch 2
+					 if (message == ("flip switch 2") && switch2 == 0)
+					 {
+						 switch2 = 1;
+						 std::cout << "You flipped switch 2" << std::endl;
+					 }
+
+					 if (message == (verb1 + " switch 2"))
+					 {
+						 std::cout << "You see a small lightswitch with the letter ""A"" under it." << std::endl;
+					 }
+
+					 //Switch 3
+					 if (message == ("flip switch 3") && switch3 == 0)
+					 {
+						 switch3 = 1;
+						 std::cout << "You flipped switch 3" << std::endl;
+					 }
+
+					 if (message == (verb1 + " switch 3"))
+					 {
+						 std::cout << "You see a small lightswitch with the letter ""N"" under it." << std::endl;
+					 }
+
+					 //Switch 4
+					 if (message == ("flip switch 4") && switch4 == 0)
+					 {
+						 switch4 = 1;
+						 std::cout << "You flipped switch 4" << std::endl;
+					 }
+
+					 if (message == (verb1 + " switch 4"))
+					 {
+						 std::cout << "You see a small lightswitch with the letter ""S"" under it." << std::endl;
+					 }
+
+					 //Reset Switch
+					 if (message == ("reset switches"))
+					 {
+						 switch1 = 0;
+						 switch2 = 0;
+						 switch3 = 0;
+						 switch4 = 0;
+						 std::cout << "You flip all the switches back down." << std::endl;
+					 }
+
+					 //Help
+					 if (message == ("help"))
+					 {
+						 std::cout << "Use verbs such as look at, walk to, pick up, or flip" << std::endl;
+						 std::cout << "Some helpful nouns would be note, switch, inventory, and door" << std::endl;
+						 std::cout << "Make sure to type everything in lowercase" << std::endl;
+					 }
+					 while (switch1 == 1 && switch2 == 1 && switch3 == 1 && switch4 == 1 && roomBeaten == 0)
+					 {
+						 roomBeaten = 1;
+					 }
+				 }
+			 }
 		 }
 
 	}
